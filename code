@@ -1,0 +1,284 @@
+HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ending Food Deserts: Access to Healthy Food for All</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Ending Food Deserts</h1>
+            <p>Access to healthy food for every community.</p>
+            <button class="cta-button" id="ctaBtn">Take Action Against Food Deserts</button>
+        </div>
+    </header>
+
+    <main class="container">
+        
+        <div class="split-layout">
+            <section id="about" class="main-card">
+                <h2>About the Issue</h2>
+                <p>
+                    Food insecurity happens when people don’t always have reliable access to enough affordable, nutritious food. 
+                    A <strong>food desert</strong> is an area—often a low-income neighborhood—where it is incredibly difficult to buy fresh fruit, vegetables, and whole foods. Instead, these areas are flooded with fast food chains and convenience stores that sell highly processed options.
+                </p>
+                <div class="stat-box">
+                    <p class="stat-number">13.5M</p>
+                    <p class="stat-text">According to the USDA, roughly 13.5 million people in the United States live in low-income, low-access areas that are far from a major grocery store.</p>
+                </div>
+            </section>
+
+            <section id="why-it-matters" class="main-card">
+                <h2>Why It Matters</h2>
+                <p>
+                    Living in a food desert means more than just a long trip to the grocery store. Limited access to healthy choices directly impacts physical health, causing higher rates of chronic illnesses, increased family stress, and difficulty focusing in school. 
+                </p>
+                <blockquote class="local-example">
+                    <strong>Local Insight:</strong> In many urban neighborhoods, families without cars must take multiple city buses just to reach a store with fresh produce, spending hours on a basic chore.
+                </blockquote>
+            </section>
+        </div>
+
+        <section id="take-action">
+            <h2 class="section-title">Take Action</h2>
+            <p class="section-subtitle">Here are realistic, impactful steps you can take this week to support food justice:</p>
+            
+            <div class="action-grid">
+                <div class="action-card">
+                    <h3>1. School Food Drives</h3>
+                    <p>Coordinate with your student council or a favorite teacher to host a healthy food drive focusing on low-sodium, whole-grain, and canned goods.</p>
+                </div>
+                <div class="action-card">
+                    <h3>2. Raise Awareness</h3>
+                    <p>Create digital infographics or presentations for your classes to educate peers about how zip codes affect health and nutrition access.</p>
+                </div>
+                <div class="action-card">
+                    <h3>3. Support Local Gardens</h3>
+                    <p>Volunteer at a local community garden or urban farm to learn how local neighborhoods are growing their own sustainable food sources.</p>
+                </div>
+            </div>
+            <p class="safety-note"><em>Reminder: Always ensure volunteer activities are safe and approved by your family or school advisor.</em></p>
+        </section>
+
+        <section id="resources" class="main-card">
+            <h2>Resources & Tools</h2>
+            <p>Ready to dig deeper? Check out these organizations fighting for food equity:</p>
+            <ul class="resource-list">
+                <li><a href="https://www.feedingamerica.org" target="_blank">Feeding America</a> – Learn about nationwide food bank networks.</li>
+                <li><a href="https://www.usda.gov" target="_blank">USDA Food Access Research Atlas</a> – Interactive maps detailing food access across communities.</li>
+            </ul>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Thank you for learning about food deserts and food insecurity.</p>
+        <p>This site was built to inspire small community actions that drive major global change.</p>
+    </footer>
+
+    <script>
+        document.getElementById('ctaBtn').addEventListener('click', function() {
+            document.getElementById('take-action').scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
+🎨 Refined CSS (style.css)
+CSS
+/* style.css */
+
+/* Modern CSS Variables for Design Consistency */
+:root {
+    --primary-color: #6b1e3b;      /* Maroon */
+    --secondary-color: #2b1b3f;    /* Deep Purple */
+    --accent-color: #f4b41a;       /* Gold */
+    --accent-hover: #e09c10;      /* Darker Gold */
+    --bg-color: #f7f3e9;          /* Soft Cream */
+    --card-bg: #ffffff;           /* Crisp White */
+    --text-color: #333333;
+    --border-color: #e0ded7;
+}
+
+/* Base Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+/* Layout Container */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+/* Hero Header */
+.hero {
+    background-color: var(--primary-color);
+    color: #ffffff;
+    text-align: center;
+    padding: 80px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.hero h1 {
+    font-size: 2.8rem;
+    margin: 0 0 10px 0;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin: 0 0 25px 0;
+    opacity: 0.9;
+}
+
+/* Call to Action Button with Smooth Transitions */
+.cta-button {
+    background-color: var(--accent-color);
+    color: var(--secondary-color);
+    font-weight: bold;
+    border: none;
+    padding: 12px 28px;
+    font-size: 1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.cta-button:hover, .cta-button:focus {
+    background-color: var(--accent-hover);
+    transform: translateY(-2px);
+    outline: none;
+}
+
+/* Card Architectures */
+.main-card {
+    background: var(--card-bg);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    margin-bottom: 30px;
+}
+
+/* Responsive Split Layout */
+.split-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+@media (max-width: 768px) {
+    .split-layout {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Decorative Statistical & Blockquote Breakouts */
+.stat-box {
+    background-color: var(--bg-color);
+    border-left: 5px solid var(--accent-color);
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 0 4px 4px 0;
+}
+
+.stat-number {
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+    margin: 0;
+}
+
+.stat-text {
+    margin: 5px 0 0 0;
+    font-size: 0.95rem;
+}
+
+.local-example {
+    border-left: 5px solid var(--primary-color);
+    background: #fdfbf7;
+    padding: 15px;
+    margin: 20px 0 0 0;
+    font-style: italic;
+}
+
+/* Take Action Grid Layout */
+.section-title {
+    text-align: center;
+    color: var(--secondary-color);
+    margin-top: 40px;
+}
+
+.section-subtitle {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.action-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.action-card {
+    background: var(--card-bg);
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    border-top: 4px solid var(--primary-color);
+}
+
+.action-card h3 {
+    color: var(--primary-color);
+    margin-top: 0;
+}
+
+.safety-note {
+    text-align: center;
+    font-size: 0.9rem;
+    margin-top: 20px;
+    color: #666;
+}
+
+/* Resource List Links */
+.resource-list {
+    list-style: none;
+    padding: 0;
+}
+
+.resource-list li {
+    margin-bottom: 10px;
+}
+
+.resource-list a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.resource-list a:hover {
+    text-decoration: underline;
+}
+
+/* Footer Styling */
+footer {
+    background-color: var(--secondary-color);
+    color: #ffffff;
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 60px;
+    font-size: 0.95rem;
+}
+
+footer p {
+    margin: 5px 0;
